@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback - X Bot App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #1DA1F2;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #1DA1F2;
+        }
+        
+        .close-btn {
+            background: #1DA1F2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .close-btn:hover {
+            background: #0d8bd9;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .success-icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>تمت المصادقة بنجاح!</h1>
+        
+        <p>تم استلام طلب المصادقة من Twitter API بنجاح.</p>
+        
+        <div class="info-box">
+            <p><strong>التطبيق:</strong> X Bot App</p>
+            <p><strong>الوظيفة:</strong> إدارة حساب X آلياً</p>
+            <p><strong>التاريخ:</strong> مارس 2026</p>
+        </div>
+        
+        <p>يمكنك إغلاق هذه الصفحة بأمان.</p>
+        <p>سيستمر التطبيق في العمل تلقائياً.</p>
+        
+        <button class="close-btn" onclick="window.close()">إغلاق الصفحة</button>
+    </div>
+    
+    <script>
+        // إرسال رسالة نجاح إلى console للمطورين
+        console.log('✅ Twitter API Callback Successfully Received');
+        console.log('📱 App: X Bot App');
+        console.log('🔗 URL:', window.location.href);
+        
+        // إغلاق تلقائي بعد 5 ثوانٍ
+        setTimeout(() => {
+            console.log('🔄 Auto-closing callback page...');
+            window.close();
+        }, 5000);
+    </script>
+</body>
+</html>
